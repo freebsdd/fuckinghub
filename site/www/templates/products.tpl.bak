@@ -1,0 +1,12 @@
+<div id="prod_list">
+{% if arr_prods.products %}
+    <table id="prods">
+    {% for entry in arr_prods.products %}
+        {% include 'product_line_item.tpl' %}
+    {% endfor %}
+    </table>
+    <div style="padding: 5px; border: 1px solid #c7c7c7; width: 100%;"><a class="prod_act" data-fields="pl=site##action=load_more">load more</a></div>
+{% else %}
+    <div>Товары не найдены!</div>
+{% endif %}
+</div>
